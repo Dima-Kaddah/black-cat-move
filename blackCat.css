@@ -1,0 +1,27 @@
+:root {
+  --pixel-size: 2;
+}
+body {
+  background-image: url('ba.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.character {
+  width: calc(150px * var(--pixel-size));
+  height: calc(180px * var(--pixel-size));
+  margin: auto;
+  margin-top: 350px;
+  overflow: hidden;
+}
+.character_spritesheet {
+  animation: moveSpritesheet 1s steps(9) infinite;
+  width: calc(1650px * var(--pixel-size));
+}
+@keyframes moveSpritesheet {
+  from {
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
